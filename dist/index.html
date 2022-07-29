@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./index.css">
-  <script src="./index.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.d48f6cd1.png">
+  <link rel="stylesheet" href="/index.61d3354a.css">
+  <script src="/index.579125c3.js" defer=""></script>
 
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-  </style>
+  <style>.attribution {
+  text-align: center;
+  font-size: 11px;
+}
+
+</style>
 </head>
 
 <body class="bg-darker-blue flex flex-col">
@@ -27,11 +27,10 @@
     <!-- thank you card-->
     <div id="thankYou" class="absolute opacity-0 pointer-events-none top-8 text-white card-gradient p-8 rounded-[30px] drop-shadow-md max-w-[450px] transition-all duration-1000">
       <div class="flex justify-center items-center mb-8 xs:mb-10 mt-6">
-        <img src="../assets/images/illustration-thank-you.svg" class="h-32 xs:h-36" alt="star">
+        <img src="/illustration-thank-you.f2ce2afe.svg" class="h-32 xs:h-36" alt="star">
       </div>
       <div class="text-center mb-8">
-        <span id="userRatingStat"
-          class="inline-block bg-dark-gray text-orange py-2 px-8 rounded-full text-md xs:text-lg text-center"></span>
+        <span id="userRatingStat" class="inline-block bg-dark-gray text-orange py-2 px-8 rounded-full text-md xs:text-lg text-center"></span>
       </div>
       <h3 class="text-3xl font-bold text-center mb-2 xs:mb-4 xs:text-3xl">Thank you!</h3>
       <p class="text-center text-light-gray text-md mb-6 xs:mb-10 xs:text-lg">We appreciate you taking the time to give
@@ -40,9 +39,8 @@
     </div>
     <!-- Rating card -->
     <div id="ratingCard" class="text-white card-gradient p-8 rounded-[30px] drop-shadow-md max-w-[450px]">
-      <div
-        class="w-14 h-14 xs:w-16 xs:h-16 bg-dark-gray inline-block flex justify-center items-center rounded-full mb-6 xs:mb-8">
-        <img src="../assets/images/icon-star.svg" class="h-5" alt="star">
+      <div class="w-14 h-14 xs:w-16 xs:h-16 bg-dark-gray inline-block flex justify-center items-center rounded-full mb-6 xs:mb-8">
+        <img src="/icon-star.a6edca50.svg" class="h-5" alt="star">
       </div>
       <h3 class="text-2xl font-bold mb-2 xs:mb-4 xs:text-3xl">How did we do?</h3>
       <p class="text-light-gray text-md mb-6 xs:mb-10 xs:text-lg">Please let us know how we did with your support
@@ -53,49 +51,37 @@
         <div class="flex justify-between mb-6 xs:mb-8">
           <div class="group tabThroughRating">
             <input type="radio" class="opacity-0 absolute pointer-events-none" name="rating" id="rating1" value="1">
-            <label
-              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full hover:bg-light-gray hover:text-white cursor-pointer"
-              for="rating1">
+            <label class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full hover:bg-light-gray hover:text-white cursor-pointer" for="rating1">
               <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">1</span>
             </label>
           </div>
           <div class="tabThroughRating">
             <input type="radio" class="opacity-0 absolute pointer-events-none" name="rating" id="rating2" value="2">
-            <label
-              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
-              for="rating2">
+            <label class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white" for="rating2">
               <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">2</span>
             </label>
           </div>
           <div class="tabThroughRating">
             <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating3" value="3">
-            <label
-              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
-              for="rating3">
+            <label class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white" for="rating3">
               <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">3</span>
             </label>
           </div>
           <div class="tabThroughRating">
             <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating4" value="4">
-            <label
-              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
-              for="rating4">
+            <label class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white" for="rating4">
               <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">4</span>
             </label>
           </div>
           <div class="tabThroughRating">
-            <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating5"
-              value="5">
-            <label
-              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
-              for="rating5">
+            <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating5" value="5">
+            <label class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white" for="rating5">
               <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">5</span>
             </label>
           </div>
         </div>
         <div>
-          <input type="submit" value="Submit"
-            class="bg-orange text-white py-2 block w-full rounded-full text-lg uppercase tracking-widest xs:py-3 xs:text-xl hover:bg-white hover:text-orange active:bg-white active:text-orange transition cursor-pointer">
+          <input type="submit" value="Submit" class="bg-orange text-white py-2 block w-full rounded-full text-lg uppercase tracking-widest xs:py-3 xs:text-xl hover:bg-white hover:text-orange active:bg-white active:text-orange transition cursor-pointer">
           <span id="ratingError" class="hidden text-red-500 block mt-8 text-center"></span>
         </div>
       </form>
