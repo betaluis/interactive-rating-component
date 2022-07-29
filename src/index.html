@@ -1,38 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
-  
+  <script src="./index.js" defer></script>
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body class="bg-darker-blue flex flex-col">
-    <section class="container mx flex-1 min-h-screen px-4 border">
-      <div>
-        <div>
-          <p>...star</p>
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quam?</p>
-          <!-- Will this be a form? -->
-          <div> 
-            ...rating
+  <!-- Submitted -->
+  <section class="flex-1 min-h-screen px-6 flex justify-center items-center">
+    <div class="text-white card-gradient p-8 rounded-[30px] drop-shadow-md max-w-[450px]">
+      <div class="flex justify-center items-center mb-8 xs:mb-10 mt-6">
+        <img src="../assets/images/illustration-thank-you.svg" class="h-32 xs:h-36" alt="star">
+      </div>
+      <div class="text-center mb-8">
+        <span id="userRatingStat"
+          class="inline-block bg-dark-gray text-orange py-2 px-8 rounded-full text-md xs:text-lg text-center"></span>
+      </div>
+      <h3 class="text-3xl font-bold text-center mb-2 xs:mb-4 xs:text-3xl">Thank you!</h3>
+      <p class="text-center text-light-gray text-md mb-6 xs:mb-10 xs:text-lg">We appreciate you taking the time to give
+        a rating. If you ever need more support, don't hesitate to get in touch!</p>
+      <!-- Will this be a form? -->
+    </div>
+  </section>
+  <!-- Form -->
+  <section class="flex-1 min-h-screen px-6 flex justify-center items-center">
+    <div class="text-white card-gradient p-8 rounded-[30px] drop-shadow-md max-w-[450px]">
+      <div
+        class="w-14 h-14 xs:w-16 xs:h-16 bg-dark-gray inline-block flex justify-center items-center rounded-full mb-6 xs:mb-8">
+        <img src="../assets/images/icon-star.svg" class="h-5" alt="star">
+      </div>
+      <h3 class="text-2xl font-bold mb-2 xs:mb-4 xs:text-3xl">How did we do?</h3>
+      <p class="text-light-gray text-md mb-6 xs:mb-10 xs:text-lg">Please let us know how we did with your support
+        request. All feedback is
+        appreciated to help us improve our offering!</p>
+
+      <form id="rating-form">
+        <div class="flex justify-between mb-6 xs:mb-10">
+          <div class="group tabThroughRating">
+            <input type="radio" class="opacity-0 absolute pointer-events-none" name="rating" id="rating1" value="1">
+            <label
+              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full hover:bg-light-gray hover:text-white cursor-pointer"
+              for="rating1">
+              <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">1</span>
+            </label>
+          </div>
+          <div class="tabThroughRating">
+            <input type="radio" class="opacity-0 absolute pointer-events-none" name="rating" id="rating2" value="2">
+            <label
+              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
+              for="rating2">
+              <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">2</span>
+            </label>
+          </div>
+          <div class="tabThroughRating">
+            <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating3" value="3">
+            <label
+              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
+              for="rating3">
+              <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">3</span>
+            </label>
+          </div>
+          <div class="tabThroughRating">
+            <input type="radio" class="opacity-0 pointer-events-none absolute" name="rating" id="rating4" value="4">
+            <label
+              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
+              for="rating4">
+              <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">4</span>
+            </label>
+          </div>
+          <div class="tabThroughRating">
+            <input type="radio" checked class="opacity-0 pointer-events-none absolute" name="rating" id="rating5"
+              value="5">
+            <label
+              class="block relative bg-dark-gray text-light-gray w-10 h-10 xxs:w-14 xxs:h-14 xs:w-16 xs:h-16 rounded-full group hover:bg-light-gray hover:text-white cursor-pointer peer-checked:bg-orange peer-checked:text-white"
+              for="rating5">
+              <span class="absolute transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 xs:text-xl">5</span>
+            </label>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="py-2">
-      <div class="attribution text-white">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="text-blue-400" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#" class="text-blue-400">Luis Betancourt</a>.
-      </div>
-    </footer>
+        <div>
+          <input type="submit" value="Submit"
+            class="bg-orange text-white py-3 block w-full rounded-full text-xl uppercase tracking-widest hover:bg-white hover:text-orange focus:outline-none focus:border-none focus:appearance-none active:bg-white active:text-orange transition cursor-pointer">
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer class="py-2">
+    <div class="attribution text-white">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="text-orange" target="_blank">Frontend
+        Mentor</a>.
+      Coded by <a href="#" class="text-orange">Luis Betancourt</a>.
+    </div>
+  </footer>
 </body>
+
 </html>

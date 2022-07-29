@@ -11,4 +11,17 @@
   body {
     font-family: 'Overpass', sans-serif;
   }
+  .card-gradient {
+    background: rgb(34,41,51);
+    background: -moz-radial-gradient(circle at top, rgba(38,46,57,1) 0%, rgba(24,29,40,1) 100%);
+    background: -webkit-radial-gradient(circle at top, rgba(38,46,57,1) 0%, rgba(24,29,40,1) 100%);
+    background: radial-gradient(circle at top, rgba(38,46,57,1) 0%, rgba(24,29,40,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222933",endColorstr="#181d28",GradientType=1);
+  }
+
+}
+@layer components {
+  .tabThroughRating > input:first-child:focus-within + label {
+    @apply bg-orange text-white;
+  }
 }
